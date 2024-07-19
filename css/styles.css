@@ -12,7 +12,7 @@ body {
     width: 80%;
     height: 400px; /* Điều chỉnh chiều cao nếu cần */
     margin: auto;
-    background: url('../assets/image/background.htm') no-repeat center center; /* Đường dẫn đến hình nền */
+    background: url('../assets/image/background.png') no-repeat center center; /* Đường dẫn đến hình nền */
     background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
     border-radius: 10px; /* Tùy chọn làm tròn các góc */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tùy chọn thêm bóng đổ */
