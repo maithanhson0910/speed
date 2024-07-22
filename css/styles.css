@@ -9,30 +9,30 @@ body {
 
 .container {
     position: relative;
-    width: 80%;
-    height: 400px; /* Điều chỉnh chiều cao nếu cần */
-    margin: auto;
-    background: url('../assets/image/background.png') no-repeat center center; /* Đường dẫn đến hình nền */
+    width: 80%; 
+    height: 620px; /* Điều chỉnh chiều cao nếu cần */
+    margin: 20px;
     background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
     border-radius: 10px; /* Tùy chọn làm tròn các góc */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tùy chọn thêm bóng đổ */
-    padding: 20px; /* Tùy chọn thêm khoảng cách bên trong */
     background-color: #eeece9;
+    overflow: hidden;
 }
 
 img {
     position: absolute;
-    width: 140px; /* Điều chỉnh kích thước hình ảnh nếu cần */
     cursor: pointer;
 }
 
 #kangaroo {
     top: 240px; /* Đặt vị trí của chim én nếu cần */
     left: 0;
+    width: 350px;
 }
 
 #swallow {
     left: 0;
+    width: 170px;
 }
 
 #restart {
@@ -57,4 +57,10 @@ img {
     cursor: pointer;
     background-color: #00c500;
     color: white;
+}
+
+#grass {
+    width: 100%;
+    height: auto;
+    margin-top: 12%;
 }
