@@ -9,12 +9,16 @@ body {
 
 .container {
     position: relative;
-    width: 80%; 
-    height: 620px; /* Điều chỉnh chiều cao nếu cần */
+    width: 80%;
+    height: 620px;
+    /* Điều chỉnh chiều cao nếu cần */
     margin: 20px;
-    background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
-    border-radius: 10px; /* Tùy chọn làm tròn các góc */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tùy chọn thêm bóng đổ */
+    background-size: cover;
+    /* Đảm bảo hình nền phủ toàn bộ phần tử */
+    border-radius: 10px;
+    /* Tùy chọn làm tròn các góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Tùy chọn thêm bóng đổ */
     background-color: #eeece9;
     overflow: hidden;
 }
@@ -25,7 +29,8 @@ img {
 }
 
 #kangaroo {
-    top: 240px; /* Đặt vị trí của chim én nếu cần */
+    top: 240px;
+    /* Đặt vị trí của chim én nếu cần */
     left: 0;
     width: 350px;
 }
@@ -37,7 +42,8 @@ img {
 
 #restart {
     position: absolute;
-    bottom: 20px; /* Đặt vị trí của nút Restart nếu cần */
+    bottom: 20px;
+    /* Đặt vị trí của nút Restart nếu cần */
     left: 60%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -49,7 +55,8 @@ img {
 
 #run {
     position: absolute;
-    bottom: 20px; /* Đặt vị trí của nút Restart nếu cần */
+    bottom: 20px;
+    /* Đặt vị trí của nút Restart nếu cần */
     left: 35%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -63,4 +70,46 @@ img {
     width: 100%;
     height: auto;
     margin-top: 12%;
+}
+
+@media (max-width: 670px) {
+    #grass {
+        margin-top: 23% !important;
+    }
+}
+
+@media (max-width: 932px) {
+    .container {
+        height: 310px;
+    }
+
+    #grass {
+        margin-top: 17%;
+    }
+
+    #swallow {
+        width: 100px;
+    }
+
+    #kangaroo {
+        top: 135px;
+        width: 170px;
+    }
+
+    #restart, #run {
+        padding: 3px 11px;
+        font-size: 11px;
+        bottom: 7px;
+    }
+
+    p {
+        font-size: 12px;
+        margin-bottom: unset;
+    }
+}
+
+@media (min-width: 1024px) {
+    #grass {
+        margin-top: 36%;
+    }
 }
