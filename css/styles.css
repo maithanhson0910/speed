@@ -74,11 +74,11 @@ img {
 
 @media (max-width: 670px) {
     #grass {
-        margin-top: 23% !important;
+        margin-top: 23%;
     }
 }
 
-@media (max-width: 932px) {
+@media (min-width: 680px) and (max-width: 932px) {
     .container {
         height: 310px;
     }
@@ -96,7 +96,8 @@ img {
         width: 170px;
     }
 
-    #restart, #run {
+    #restart,
+    #run {
         padding: 3px 11px;
         font-size: 11px;
         bottom: 7px;
@@ -108,7 +109,7 @@ img {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 940px) and (max-width: 1024px) {
     #grass {
         margin-top: 36%;
     }
