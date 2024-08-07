@@ -5,6 +5,9 @@ $(document).ready(function () {
         var startPosition = $this.position().left;
         var containerWidth = $('.container').width();
         var imageWidth = $this.width();
+        var kangarooAudio = document.getElementById('kangaroo-audio');
+
+        kangarooAudio.play(); // Play the kangaroo audio
 
         if (startPosition < containerWidth - imageWidth) {
             $this.animate({ left: containerWidth - imageWidth }, 5000); // Thay đổi thời gian di chuyển nếu cần
@@ -19,6 +22,9 @@ $(document).ready(function () {
         var startPosition = $this.position().left;
         var containerWidth = $('.container').width();
         var imageWidth = $this.width();
+        var swallowAudio = document.getElementById('swallow-audio');
+
+        swallowAudio.play(); // Play the swallow audio
 
         if (startPosition < containerWidth - imageWidth) {
             $this.animate({ left: containerWidth - imageWidth }, 2380); // Thay đổi thời gian di chuyển nếu cần
