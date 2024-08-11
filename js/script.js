@@ -1,5 +1,22 @@
 $(document).ready(function () {
-    // Xử lý sự kiện click cho hình ảnh Kangaroo
+    var overlayHtml = '<div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 1); z-index: 999;">';
+    overlayHtml += '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; font-size: 24px;">Xin hãy mở chế độ ngang</div>';
+    overlayHtml += '</div>';
+
+    // Thêm màn đen và thông báo vào body của trang
+    $('body').append(overlayHtml);
+
+    function checkOrientation() {
+        if (window.innerWidth > window.innerHeight) {
+            $('#overlay').fadeOut();
+            $('.container').show();
+        } else {
+            $('#overlay').fadeIn(); 
+            $('.container').hide();
+        }
+    }
+    checkOrientation();
+    $(window).on('load resize', checkOrientation);
     $('#kangaroo').click(function () {
         var $this = $(this);
         var startPosition = $this.position().left;
@@ -10,9 +27,9 @@ $(document).ready(function () {
         kangarooAudio.play(); // Play the kangaroo audio
 
         if (startPosition < containerWidth - imageWidth) {
-            $this.animate({ left: containerWidth - imageWidth }, 5000); // Thay đổi thời gian di chuyển nếu cần
+            $this.animate({ left: containerWidth - imageWidth }, 5000);
         } else {
-            $this.animate({ left: 0 }, 5000); // Thay đổi thời gian di chuyển nếu cần
+            $this.animate({ left: 0 }, 5000);
         }
     });
 
@@ -27,18 +44,16 @@ $(document).ready(function () {
         swallowAudio.play(); // Play the swallow audio
 
         if (startPosition < containerWidth - imageWidth) {
-            $this.animate({ left: containerWidth - imageWidth }, 2380); // Thay đổi thời gian di chuyển nếu cần
+            $this.animate({ left: containerWidth - imageWidth }, 2380);
         } else {
-            $this.animate({ left: 0 }, 2380); // Thay đổi thời gian di chuyển nếu cần
+            $this.animate({ left: 0 }, 2380);
         }
     });
 
-    // Xử lý sự kiện click cho nút Restart
     $('#restart').click(function () {
-        $('#kangaroo, #swallow').stop().animate({ left: 0 }, 1000); // Thay đổi thời gian di chuyển nếu cần
+        $('#kangaroo, #swallow').stop().animate({ left: 0 }, 1000);
     });
 
-    // Xử lý sự kiện click cho nút Run để di chuyển cả hai hình ảnh
     $('#run').click(function () {
         var containerWidth = $('.container').width();
         var kangarooWidth = $('#kangaroo').width();
@@ -48,6 +63,5 @@ $(document).ready(function () {
         $('#swallow').stop().animate({ left: containerWidth - swallowWidth }, 2380);
     });
 
-    // Khởi tạo tooltips với Bootstrap
     $('[data-toggle="tooltip"]').tooltip();
 });

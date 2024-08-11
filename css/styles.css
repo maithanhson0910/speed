@@ -76,6 +76,19 @@ img {
     #grass {
         margin-top: 23%;
     }
+
+    #swallow {
+        width: 120px;
+    }
+
+    #kangaroo{
+        top: 130px;
+        width: 175px;
+    }
+
+    .container {
+        height: 354px;
+    }
 }
 
 @media (min-width: 680px) and (max-width: 932px) {
